@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@color/colorTextBackground"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/loginEmail"
+        android:id="@+id/registerEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email"
@@ -20,7 +20,7 @@
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/loginPassword"
+        android:id="@+id/registerPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
@@ -30,26 +30,48 @@
         android:inputType="textPassword"
         android:autofillHints="" />
 
-    <Button
-        android:id="@+id/btnLoginLogin"
+    <EditText
+        android:id="@+id/registerConfirmPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/login"
-        android:textColor="@color/colorWhite" />
+        android:hint="@string/confirm_password"
+        android:textColor="@color/colorText"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/registerFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/first_name"
+        android:textColor="@color/colorText"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/registerLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/last_name"
+        android:textColor="@color/colorText"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:autofillHints="" />
+
 
     <Button
-        android:id="@+id/btnLoginSignUp"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
         android:background="@color/colorPrimary"
-        android:onClick="sendMessage"
-        android:text="@string/sign_up"
-        android:textColor="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:text="@string/sign_up" />
 </LinearLayout>
