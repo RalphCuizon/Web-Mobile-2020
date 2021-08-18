@@ -4,52 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorTextBackground"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <EditText
-        android:id="@+id/loginEmail"
+        android:id="@+id/etLoginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email"
-        android:textColor="@color/colorText"
-        android:ems="10"
+        android:textColor="@color/text"
+        android:autofillHints="emailAddress"
         android:layout_margin="20dp"
-        android:inputType="textEmailAddress"
-        android:autofillHints="" />
+        android:ems="10"
+        android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/loginPassword"
+        android:id="@+id/etLoginPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
-        android:textColor="@color/colorText"
         android:layout_margin="20dp"
+        android:autofillHints="password"
+        android:textColor="@color/text"
         android:ems="10"
-        android:inputType="textPassword"
-        android:autofillHints="" />
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnLoginLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/login"
-        android:textColor="@color/colorWhite" />
+        android:layout_marginBottom="20dp"
+        android:text="@string/login" />
 
     <Button
         android:id="@+id/btnLoginSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@color/colorPrimary"
-        android:onClick="sendMessage"
-        android:text="@string/sign_up"
-        android:textColor="@color/colorWhite" />
+        android:layout_margin="20dp"
+        android:text="@string/sign_up" />
 </LinearLayout>
+
