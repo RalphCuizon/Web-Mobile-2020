@@ -22,6 +22,6 @@ while($row=$rs->fetch_assoc())
     array_push($emps, $row);
 }
 
-echp json_encode($emps);
+echo json_encode($emps);
 
 ?>
