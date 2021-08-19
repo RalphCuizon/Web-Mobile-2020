@@ -7,4 +7,9 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
+    <string name="enter_your_exercise">Enter Your Exercise</string>
+    <string name="add_exercise">add Exercise</string>
+    <string name="category">Category</string>
+    <string name="time">Time</string>
+    <string name="description">Description</string>
 </resources>
