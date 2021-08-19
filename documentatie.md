@@ -10,3 +10,4 @@
 |design login en registratie activiteit|https://www.youtube.com/watch?v=PVfF1DO8Jl8&list=PLrUNEklLHiKUbGOed4bZAr4HzWSzO8QGL&index=4|
 |login en registratie activiteit linken met database |https://www.youtube.com/watch?v=bT2T_yEMS5I&list=PLrUNEklLHiKUbGOed4bZAr4HzWSzO8QGL&index=6|
 |exercises(tafel) db met PHP mySQL|https://www.youtube.com/watch?v=1c6yOstlS08&list=PLrUNEklLHiKUbGOed4bZAr4HzWSzO8QGL&index=17|
+|RecyclerView met Get_Exercises.php|https://www.youtube.com/watch?v=9sUtCA8QWxQ&list=PLrUNEklLHiKUbGOed4bZAr4HzWSzO8QGL&index=13|
