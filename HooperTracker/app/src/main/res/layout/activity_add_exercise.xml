@@ -55,4 +55,10 @@
         android:onClick="onClickBtnAddExerciseAdd"
         android:text="@string/add" />
 
+    <TextView
+        android:id="@+id/tvTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
 </LinearLayout>

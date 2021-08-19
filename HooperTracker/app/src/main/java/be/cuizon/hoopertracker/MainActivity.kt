@@ -61,14 +61,14 @@ class MainActivity : AppCompatActivity() {
             val queue = Volley.newRequestQueue(this)
             val stringRequest = StringRequest(Request.Method.POST, url, { response ->
                 if (response.equals("0")) {
-                    Toast.makeText(this, "Unsuccesfully logged in", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Unsuccessfully logged in", Toast.LENGTH_LONG).show()
                 }
                 else {
                     Log.i("test", response)
                     Log.i("test", etEmail.text.toString())
                     Log.i("test", etPassword.text.toString())
                     UserInfo.email = etEmail.text.toString()
-                    Toast.makeText(this, "Succesfully logged in", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Successfully logged in", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
                 }
