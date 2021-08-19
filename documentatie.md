@@ -7,3 +7,5 @@
 |Volley Library (HTTPS)|https://developer.android.com/training/volley|
 |Start another activity|https://developer.android.com/training/basics/firstapp/starting-activity#CreateActivity|
 |Form Validation with library Easy Validation|https://wajahatkarim.com/2018/08/quickly--easily-validating-your-text-with-easy-validation/|
+|design login en registratie activiteit|https://www.youtube.com/watch?v=PVfF1DO8Jl8&list=PLrUNEklLHiKUbGOed4bZAr4HzWSzO8QGL&index=4|
+|login en registratie activiteit linken met database |https://www.youtube.com/watch?v=bT2T_yEMS5I&list=PLrUNEklLHiKUbGOed4bZAr4HzWSzO8QGL&index=6|
