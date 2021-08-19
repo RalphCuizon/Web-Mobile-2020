@@ -3,6 +3,7 @@ package be.cuizon.hoopertracker
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
@@ -28,6 +29,11 @@ class MainActivity : AppCompatActivity() {
 
     /**
      *     When Button Login is clicked,
+     *     check if password and email are not empty and email is valid,
+     *     if it is then the user receive a error message
+     *     if it isn't the login.php is called (GET)
+     *
+     *
      */
     fun onClickBtnLoginLogin(view: View) {
 
@@ -53,14 +59,19 @@ class MainActivity : AppCompatActivity() {
                 "https://www.ralphcuizon.be/hoopertracker/login.php?email=" + etEmail.text.toString() +
                         "&password=" + etPassword.text.toString()
             val queue = Volley.newRequestQueue(this)
-            val stringRequest = StringRequest(Request.Method.GET, url, { response ->
-                if (response.equals("Unsuccesfully logged in"))
-                    Toast.makeText(this, "U nsuccesfully logged in", Toast.LENGTH_LONG).show()
-                else
+            val stringRequest = StringRequest(Request.Method.POST, url, { response ->
+                if (response.equals("0")) {
+                    Toast.makeText(this, "Unsuccesfully logged in", Toast.LENGTH_LONG).show()
+                }
+                else {
+                    Log.i("test", response)
+                    Log.i("test", etEmail.text.toString())
+                    Log.i("test", etPassword.text.toString())
                     UserInfo.email = etEmail.text.toString()
                     Toast.makeText(this, "Succesfully logged in", Toast.LENGTH_LONG).show()
-                val intent = Intent(this,HomeActivity::class.java)
-                startActivity(intent)
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                }
 
                 }, { error ->
                     Toast.makeText(this, error.message, Toast.LENGTH_LONG).show()

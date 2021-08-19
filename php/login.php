@@ -7,10 +7,10 @@ $stmt_check->bind_param("ss", $_GET["email"],$_GET["password"]);
 $stmt_check->execute();
 $rs = $stmt_check->get_result();
 if ($rs->num_rows==0)  { 
-    echo "Unsuccesfully logged in";
+    echo "0";
 }
 else {
-    echo "Succesfully logged in";
+    echo "1";
 } 
 
 ?>

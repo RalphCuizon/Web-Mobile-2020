@@ -3,6 +3,7 @@ package be.cuizon.hoopertracker
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
@@ -53,15 +54,20 @@ class RegisterActivity : AppCompatActivity() {
                             "&firstname=" + etFirstName.text.toString() +
                             "&lastname=" + etLastName.text.toString()
                 val queue = Volley.newRequestQueue(this)
-                var stringRequest = StringRequest(Request.Method.GET, url, { response ->
-                    if (response.equals("Email already been used"))
+                val stringRequest = StringRequest(Request.Method.GET, url, { response ->
+                    if (response.equals("Email already been used")) {
                         Toast.makeText(this, "Email already been used", Toast.LENGTH_LONG).show()
-                    else
+                    }
+                    else {
+                        Log.i("test", response)
+
+                        Log.i("test", etEmail.text.toString())
+                        Log.i("test", etPassword.text.toString())
                         UserInfo.email = etEmail.text.toString()
                         Toast.makeText(this, "Succesfully added user", Toast.LENGTH_LONG).show()
-                        val intent = Intent(this,HomeActivity::class.java)
+                        val intent = Intent(this, HomeActivity::class.java)
                         startActivity(intent)
-
+                    }
                 }, { error ->
                     Toast.makeText(this, error.message, Toast.LENGTH_LONG).show()
                 })

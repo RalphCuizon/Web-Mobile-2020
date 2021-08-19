@@ -1,7 +1,9 @@
 package be.cuizon.hoopertracker
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,13 +28,22 @@ class HomeActivity : AppCompatActivity() {
                     response.getJSONObject(x).getString("category"),
                     response.getJSONObject(x).getString("description"),
                     response.getJSONObject(x).getString("time")))
-            var adp= ExerciseAdapter(this,list)
-            var exerciseRecyclerView = findViewById<RecyclerView>(R.id.exercises_rv)
+            val adp= ExerciseAdapter(this,list)
+            val exerciseRecyclerView = findViewById<RecyclerView>(R.id.exercises_rv)
             exerciseRecyclerView.layoutManager = LinearLayoutManager(this)
             exerciseRecyclerView.adapter = adp
         }, { error ->
             Toast.makeText(this, error.message, android.widget.Toast.LENGTH_LONG).show()
         })
         queue.add(jar)
+    }
+
+    /**
+     *     When Button Add Exercise is clicked,
+     *     Activity Add Exercise is opened
+     */
+    fun onClickBtnHomeAddExercise(view: View) {
+        val intent = Intent(this,AddExerciseActivity::class.java)
+        startActivity(intent)
     }
 }
