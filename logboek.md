@@ -9,3 +9,11 @@
 | 16/08/2021   | 2 Uren          | login en registratie activiteit linken met de database|
 | 19/08/2021   | 3 Uren          | exercises(tafel) db met PHP mySQL|
 | 19/08/2021   | 3 Uren          |RecyclerView met Get_Exercises.php |
+| 19/08/2021   | 1 Uren          |Cardview API voor de exercises|
+| 19/08/2021   |   Uren          ||
+| 19/08/2021   |   Uren          ||
+| 19/08/2021   |   Uren          ||
+| 19/08/2021   |   Uren          ||
+| 19/08/2021   |   Uren          ||
+| 19/08/2021   |   Uren          ||
+| 19/08/2021   |   Uren          ||
