@@ -5,5 +5,5 @@
 |login en registratie PHP mySQL|https://www.youtube.com/watch?v=B3R2GNA5zeI&list=PLrUNEklLHiKVMkfpF3G9HVf0AstEeZ6Sm&index=34|
 |error plugin not updated - Android Studio|https://youtrack.jetbrains.com/issue/IDEA-237012?_ga=2.150720821.2017773613.1629300321-1902068659.1629300321|
 |Volley Library (HTTPS)|https://developer.android.com/training/volley|
-|||
-|||
+|Start another activity|https://developer.android.com/training/basics/firstapp/starting-activity#CreateActivity|
+|Form Validation with library Easy Validation|https://wajahatkarim.com/2018/08/quickly--easily-validating-your-text-with-easy-validation/|

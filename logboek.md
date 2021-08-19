@@ -4,8 +4,8 @@
 | 12/08/2021   | 5 Uren          | Les 2 | 
 | 15/08/2021   | 2 Uren          | PHP en mySQL oefening |
 | 15/08/2021   | 2 Uren          | login en registratie PHP mySQL|
-| 23/08/2021   | 2 Uren          | update Android Studio + design login en registratie activiteit|
-| 27/08/2021   |  Uren          | |
+| 15/08/2021   | 4 Uren          | update Android Studio + design login en registratie activiteit|
+| 16/08/2021   |  Uren          | |
 | 30/08/2021   |  Uren          | |
 | 07/08/2021   |  Uren          | |
 | 13/08/2021   |  Uren          | |
