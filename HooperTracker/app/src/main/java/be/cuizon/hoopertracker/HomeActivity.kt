@@ -63,6 +63,12 @@ class HomeActivity : AppCompatActivity(), ExerciseAdapter.OnItemClickListener{
     override fun onItemClick(position: Int) {
         Log.i("test", list[position].id.toString())
         UserInfo.idExercise= list[position].id
+        UserInfo.category= list[position].category
+        UserInfo.time= list[position].time
+        UserInfo.description = list[position].description
+        Log.i("test",UserInfo.description)
+        val intent = Intent(this,EditorActivity::class.java)
+        startActivity(intent)
 
     }
 }
