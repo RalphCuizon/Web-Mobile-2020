@@ -16,4 +16,4 @@
 | 20/08/2021   | 2 Uren          |delete update exercise php mysql|
 | 20/08/2021   | 2 Uren          |Update Exercise php.file gelinkt aan de activiteit EditorExercise|
 | 20/08/2021   | 1 Uren          |Delete Exercise php.file gelinkt aan de activiteit EditorExercise|
-| 19/08/2021   |   Uren          ||
+| 20/08/2021   | 4 Uren          |Installatie F7, Cordova + probleem oplossen bij did not found rimraf + JAVA SDK, environment,...|
