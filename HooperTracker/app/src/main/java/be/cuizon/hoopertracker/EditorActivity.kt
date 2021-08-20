@@ -117,6 +117,30 @@ class EditorActivity : AppCompatActivity() {
      *     Activity Home is opened
      */
     fun onClickBtnEditorDelete(view: View) {
+        val id = UserInfo.idExercise.toString()
+        deleteExercise(id)
+    }
 
+    private fun deleteExercise(id: String?) {
+        val url =
+            "https://www.ralphcuizon.be/hoopertracker/delete_exercise.php"
+        val queue = Volley.newRequestQueue(this)
+        val stringRequest = object : StringRequest(Request.Method.POST, url, { response ->
+            Toast.makeText(this, "Exercise has been deleted", Toast.LENGTH_LONG).show()
+
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+
+        }, { error ->
+            Toast.makeText(this, error.message, Toast.LENGTH_LONG).show()
+        }) {
+            override fun getParams(): HashMap<String, String> {
+                val map = HashMap<String, String>()
+                map["id"] = id!!
+
+                return map
+            }
+        }
+        queue.add(stringRequest)
     }
 }
