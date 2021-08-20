@@ -1,4 +1,4 @@
-# My App
+# HooperTracker
 
 ## Framework7 CLI Options
 
@@ -10,9 +10,9 @@ Framework7 app created with following options:
   "type": [
     "cordova"
   ],
-  "name": "My App",
+  "name": "HooperTracker",
   "framework": "core",
-  "template": "single-view",
+  "template": "tabs",
   "bundler": false,
   "cssPreProcessor": false,
   "theming": {
@@ -20,10 +20,10 @@ Framework7 app created with following options:
     "color": "#007aff",
     "darkTheme": false,
     "iconFonts": true,
-    "fillBars": false
+    "fillBars": true
   },
   "customBuild": false,
-  "pkg": "io.framework7.myapp",
+  "pkg": "be.cuizon.hoopertracker",
   "cordova": {
     "folder": "cordova",
     "platforms": [

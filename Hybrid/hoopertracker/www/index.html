@@ -13,10 +13,10 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
 
-  <meta name="theme-color" content="#fff">
+  <meta name="theme-color" content="#007aff">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <title>My App</title>
+  <title>HooperTracker</title>
   
   
   
@@ -60,101 +60,131 @@
       </div>
     </div>
     
-    <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main view-init safe-areas">
-      <div class="page" data-name="home">
-        <!-- Top Navbar -->
-        <div class="navbar navbar-large">
-          <div class="navbar-bg"></div>
-          <div class="navbar-inner">
-            <div class="left">
-              <a href="#" class="link icon-only panel-open" data-panel="left">
-                <i class="icon f7-icons if-not-md">menu</i>
-                <i class="icon material-icons if-md">menu</i>
-              </a>
-            </div>
-            <div class="title sliding">My App</div>
-            <div class="right">
-              <a href="#" class="link icon-only panel-open" data-panel="right">
-                <i class="icon f7-icons if-not-md">menu</i>
-                <i class="icon material-icons if-md">menu</i>
-              </a>
-            </div>
-            <div class="title-large">
-              <div class="title-large-text">My App</div>
-            </div>
-          </div>
+    <!-- Views/Tabs container -->
+    <div class="views tabs safe-areas">
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar toolbar-bottom tabbar-labels">
+        <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+            <i class="icon f7-icons if-not-md">house_fill</i>
+            <i class="icon material-icons if-md">home</i>
+            <span class="tabbar-label">Home</span>
+          </a>
+          <a href="#view-catalog" class="tab-link">
+            <i class="icon f7-icons if-not-md">square_list_fill</i>
+            <i class="icon material-icons if-md">view_list</i>
+            <span class="tabbar-label">Catalog</span>
+          </a>
+          <a href="#view-settings" class="tab-link">
+            <i class="icon f7-icons if-not-md">gear</i>
+            <i class="icon material-icons if-md">settings</i>
+            <span class="tabbar-label">Settings</span>
+          </a>
         </div>
-        <!-- Toolbar-->
-        <div class="toolbar toolbar-bottom">
-          <div class="toolbar-inner">
-            <a href="#" class="link">Left Link</a>
-            <a href="#" class="link">Right Link</a>
-          </div>
-        </div>
-        <!-- Scrollable page content-->
-        <div class="page-content">
-          <div class="block block-strong">
-            <p>Here is your blank Framework7 app. Let's see what we have here.</p>
-          </div>
-          <div class="block-title">Navigation</div>
-          <div class="list">
-            <ul>
-              <li>
-                <a href="/about/" class="item-content item-link">
-                  <div class="item-inner">
-                    <div class="item-title">About</div>
-                  </div>
+      </div>
+
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main view-init tab tab-active">
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar navbar-large">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="left">
+                <a href="#" class="link icon-only panel-open" data-panel="left">
+                  <i class="icon f7-icons if-not-md">menu</i>
+                  <i class="icon material-icons if-md">menu</i>
                 </a>
-              </li>
-              <li>
-                <a href="/form/" class="item-content item-link">
-                  <div class="item-inner">
-                    <div class="item-title">Form</div>
-                  </div>
+              </div>
+              <div class="title sliding">HooperTracker</div>
+              <div class="right">
+                <a href="#" class="link icon-only panel-open" data-panel="right">
+                  <i class="icon f7-icons if-not-md">menu</i>
+                  <i class="icon material-icons if-md">menu</i>
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="block-title">Modals</div>
-          <div class="block block-strong">
-            <div class="row">
-              <div class="col-50">
-                <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
               </div>
-              <div class="col-50">
-                <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
+              <div class="title-large">
+                <div class="title-large-text">HooperTracker</div>
               </div>
             </div>
           </div>
 
-          <div class="block-title">Panels</div>
-          <div class="block block-strong">
-            <div class="row">
-              <div class="col-50">
-                <a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a>
-              </div>
-              <div class="col-50">
-                <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="block block-strong">
+              <p>This is an example of tabs-layout application. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
+
+              <p>Each tab/view may have different layout, different navbar type (dynamic, fixed or static) or without navbar like this tab.</p>
+            </div>
+            <div class="block-title">Navigation</div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="/about/" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title">About</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/form/" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title">Form</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="block-title">Modals</div>
+            <div class="block block-strong">
+              <div class="row">
+                <div class="col-50">
+                  <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
+                </div>
+                <div class="col-50">
+                  <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="list links-list">
-            <ul>
-              <li>
-                <a href="/dynamic-route/blog/45/post/125/?foo=bar#about">Dynamic (Component) Route</a>
-              </li>
-              <li>
-                <a href="/load-something-that-doesnt-exist/">Default Route (404)</a>
-              </li>
-              <li>
-                <a href="/request-and-load/user/123456/">Request Data & Load</a>
-              </li>
-            </ul>
+            <div class="block-title">Panels</div>
+            <div class="block block-strong">
+              <div class="row">
+                <div class="col-50">
+                  <a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a>
+                </div>
+                <div class="col-50">
+                  <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="list links-list">
+              <ul>
+                <li>
+                  <a href="/dynamic-route/blog/45/post/125/?foo=bar#about">Dynamic (Component) Route</a>
+                </li>
+                <li>
+                  <a href="/load-something-that-doesnt-exist/">Default Route (404)</a>
+                </li>
+                <li>
+                  <a href="/request-and-load/user/123456/">Request Data & Load</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- Catalog View -->
+      <div id="view-catalog" class="view view-init tab" data-name="catalog" data-url="/catalog/">
+        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-settings" class="view view-init tab" data-name="settings" data-url="/settings/">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
       </div>
     </div>
 
