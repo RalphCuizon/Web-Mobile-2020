@@ -12,7 +12,7 @@
 | 19/08/2021   | 1 Uren          |Cardview API voor de exercises|
 | 19/08/2021   | 2 Uren          |probleem opgelost wanneer login niet klopt POST ipv GET en {}|
 | 19/08/2021   | 3 Uren          |Create Exercise php.file gelinkt aan de activiteit AddExercise Activiteit|
-| 19/08/2021   |   Uren          ||
+| 20/08/2021   | 3 Uren          |onItemClicklistener met parameter op RecyclerView |
 | 19/08/2021   |   Uren          ||
 | 19/08/2021   |   Uren          ||
 | 19/08/2021   |   Uren          ||

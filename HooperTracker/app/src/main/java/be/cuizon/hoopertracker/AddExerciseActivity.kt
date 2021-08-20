@@ -20,7 +20,13 @@ class AddExerciseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_exercise)
     }
-
+    /**
+     * When Button Add is clicked,
+     * function validateForm is called
+     * check if no texts are empty
+     * check if time is equal or less than 3
+     * Thanks to Volley library and php-file and db we are able to create a exercise
+     */
     fun onClickBtnAddExerciseAdd(view: View) {
         validateForm()
 
@@ -37,8 +43,7 @@ class AddExerciseActivity : AppCompatActivity() {
             val queue = Volley.newRequestQueue(this)
             val stringRequest = StringRequest(Request.Method.GET, url, { response ->
 
-
-
+                Toast.makeText(this, "Exercise has been successfully added", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
             }, { error ->

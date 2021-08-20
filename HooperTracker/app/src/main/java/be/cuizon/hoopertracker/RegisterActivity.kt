@@ -29,7 +29,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     /**
-     * When Button Sign Up,
+     * When Button Sign Up is clicked,
      * function validateForm is called
      * check if no texts are empty
      * check if password is equal to confirm password
@@ -56,7 +56,7 @@ class RegisterActivity : AppCompatActivity() {
                 val queue = Volley.newRequestQueue(this)
                 val stringRequest = StringRequest(Request.Method.GET, url, { response ->
                     if (response.equals("Email already been used")) {
-                        Toast.makeText(this, "Email already been used", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Email has already been used", Toast.LENGTH_LONG).show()
                     }
                     else {
                         Log.i("test", response)
@@ -64,7 +64,7 @@ class RegisterActivity : AppCompatActivity() {
                         Log.i("test", etEmail.text.toString())
                         Log.i("test", etPassword.text.toString())
                         UserInfo.email = etEmail.text.toString()
-                        Toast.makeText(this, "Succesfully added user", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "User has been successfully added", Toast.LENGTH_LONG).show()
                         val intent = Intent(this, HomeActivity::class.java)
                         startActivity(intent)
                     }
