@@ -14,3 +14,4 @@
 |Cardview API voor de exercises|https://developer.android.com/guide/topics/ui/layout/cardview#kts|
 |create_exercise.php linken met de activiteit AddExercises via Volley|https://www.youtube.com/watch?v=Dh1uXPUG1NA&list=PLrUNEklLHiKUbGOed4bZAr4HzWSzO8QGL&index=18|
 |onItemClicklistener met parameter op RecyclerView|https://www.youtube.com/watch?v=wKFJsrdiGS8|
+|Update Exercise php.file gelinkt aan de activiteit EditorExercise|https://www.youtube.com/watch?v=-61IHhvDvJI|
