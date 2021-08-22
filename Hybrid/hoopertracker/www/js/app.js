@@ -34,25 +34,43 @@ var app = new Framework7({
     },
     pageInit: function (page) {
       if (page.route.name === 'exercises') {
-        getExercises();
       }
     }
   },
 });
+
 // Login Screen Demo
 $('#my-login-screen .login-button').on('click', function () {
-  var email = $('#my-login-screen [name="email"]').val();
   var password = $('#my-login-screen [name="password"]').val();
+  var email = $('#my-login-screen [name="email"]').val();
+  console.log(email);
+  
+if(email!='' && password!=''){
+    fetch('https://www.ralphcuizon.be/hoopertracker/login.php?email=' + email + '&password=' + password).then((res) => res.json())
+    .then(response => {
+      if (response == '1') {
+        $("#btnSignIn").addClass('disabled');
+        app.dialog.alert("Successfully logged in", "Login");
+        getExercises(email);
+      }
+      else {
+        app.dialog.alert("Unsuccessfully logged in", "Login");
+      }
+    }).catch(error => console.log(error));
+  }
+  else {
+    app.dialog.alert("Unsuccessfully logged in", "Login");
+  }
+
 
   // Close login screen
   app.loginScreen.close('#my-login-screen');
 
-  // Alert username and password
-  app.dialog.alert('Email: ' + email + '<br/>Password: ' + password);
+  
 });
 
 // Get Exercises
-function getExercises() {
+function getExercises(email) {
   var opties = {
     method: "POST", // *GET, POST, PUT, DELETE, etc.
     mode: "cors", // no-cors, *cors, same-origin
@@ -70,11 +88,9 @@ function getExercises() {
       table: "exercises",
       bewerking: "get"
     }); 
-    let email= 'ralph@test.com'
 
     fetch('https://www.ralphcuizon.be/hoopertracker/hybrid.php?user_email=' + email, opties).then((res) => res.json())
     .then(response => {
-      console.log(response);
 
       let tlines='';
       for (let i in response) {

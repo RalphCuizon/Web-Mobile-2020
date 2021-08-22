@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity(), ExerciseAdapter.OnItemClickListener{
          */
 
         val url =
-            "https://www.ralphcuizon.be/hoopertracker/get_exercises.php?user_email=" + UserInfo.email
+            "https://www.ralphcuizon.be/hoopertracker/hybrid.php?user_email=" + UserInfo.email
         val queue = Volley.newRequestQueue(this)
         val jar= JsonArrayRequest(Request.Method.GET, url, null, Response.Listener { response ->
             for (x in 0..response.length()-1)

@@ -67,7 +67,7 @@
             <div class="block block-strong">
               <div class="row">
                 <div class="col-100">
-                  <a href="#" class="button button-raised button-fill login-screen-open color-orange"
+                  <a href="#" id="btnSignIn" class="button button-raised button-fill login-screen-open color-orange"
                     data-login-screen="#my-login-screen">Login Here</a>
                 </div>
               </div>
@@ -102,7 +102,7 @@
                     <div class="item-title item-label">Email</div>
                     <div class="item-input-wrap">
 
-                      <input type="email" name="email" placeholder="Your email" />
+                      <input type="email" name="email" placeholder="Your email" required validate />
                     </div>
                   </div>
                 </li>
@@ -111,7 +111,7 @@
                     <div class="item-title item-label">Password</div>
                     <div class="item-input-wrap">
 
-                      <input type="password" name="password" placeholder="Your password" />
+                      <input type="password" name="password" placeholder="Your password " required validate />
                     </div>
                   </div>
                 </li>
@@ -120,7 +120,7 @@
             <div class="list">
               <ul>
                 <li>
-                  <a href="#" class="item-link list-button login-button">Sign In</a>
+                  <a href="#"  class="item-link list-button login-button">Sign In</a>
                 </li>
               </ul>
               <div class="block-footer">
