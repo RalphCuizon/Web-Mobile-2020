@@ -5,35 +5,16 @@ var routes = [
     url: './index.html',
   },
   {
-    path: '/about/',
-    url: './pages/about.html',
-  },
-  {
-    path: '/form/',
-    url: './pages/form.html',
-  },
-  {
-    path: '/catalog/',
-    componentUrl: './pages/catalog.html',
-  },
-  {
     path: '/exercises/',
     componentUrl: './pages/exercises.html',
     name: 'exercises'
   },
   {
-    path: '/product/:id/',
-    componentUrl: './pages/product.html',
-  },
-  {
-    path: '/settings/',
-    url: './pages/settings.html',
+    path: '/profile/',
+    url: './pages/profile.html',
   },
 
-  {
-    path: '/dynamic-route/blog/:blogId/post/:postId/',
-    componentUrl: './pages/dynamic-route.html',
-  },
+
   {
     path: '/request-and-load/user/:userId/',
     async: function ({ router, to, resolve }) {

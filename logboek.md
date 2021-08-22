@@ -21,7 +21,7 @@
 |22/08/2021    | 5 Uren          |Hybrid : frontend (exercises) + data|
 |22/08/2021    | 3 Uren          |Hybrid : Get exercises |
 |22/08/2021    | 3 Uren          |Hybrid : Statusbar geen zwarte bar + probleem oplossen emulator|
-|20/08/2021    | 2 Uren          |
+|22/08/2021    | 2 Uren          |Hybrid : Frontend|
 |20/08/2021    | 2 Uren          |
 |20/08/2021    | 2 Uren          |
 |20/08/2021    | 2 Uren          |

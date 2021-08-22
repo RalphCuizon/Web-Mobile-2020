@@ -7,6 +7,7 @@
 :root,
 :root.theme-dark,
 :root .theme-dark {
+  --f7-theme-color: #ff9500;
   --f7-bars-bg-color: orange;
   --f7-bars-bg-color-rgb: var(--f7-theme-color-rgb);
   --f7-bars-translucent-opacity: 0.9;

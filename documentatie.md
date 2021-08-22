@@ -17,3 +17,5 @@
 |Update Exercise php.file gelinkt aan de activiteit EditorExercise|https://www.youtube.com/watch?v=-61IHhvDvJI|
 |Delete Exercise php.file gelinkt aan de activiteit EditorExercise|https://www.youtube.com/watch?v=RELER-NZmH4|
 |Installatie F7, Cordova + probleem oplossen bij did not found rimraf + JAVA SDK, environment,...|https://github.com/apache/cordova-android/issues/1040,https://github.com/onivim/oni/issues/918,https://www.youtube.com/watch?v=KKZRDn0Fnp4&t=342s|
+|Hybrid Cordova Framework| les 2,3 en 4|
+|Framework7 Docs|https://framework7.io/docs/|
