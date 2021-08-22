@@ -33,8 +33,7 @@ var app = new Framework7({
       }
     },
     pageInit: function (page) {
-      if (page.route.name === 'exercises') {
-      }
+
     }
   },
 });
@@ -43,7 +42,6 @@ var app = new Framework7({
 $('#my-login-screen .login-button').on('click', function () {
   var password = $('#my-login-screen [name="password"]').val();
   var email = $('#my-login-screen [name="email"]').val();
-  console.log(email);
   
 if(email!='' && password!=''){
     fetch('https://www.ralphcuizon.be/hoopertracker/login.php?email=' + email + '&password=' + password).then((res) => res.json())
@@ -52,6 +50,7 @@ if(email!='' && password!=''){
         $("#btnSignIn").addClass('disabled');
         app.dialog.alert("Successfully logged in", "Login");
         getExercises(email);
+        getUserInfo(email);
       }
       else {
         app.dialog.alert("Unsuccessfully logged in", "Login");
@@ -89,7 +88,7 @@ function getExercises(email) {
       bewerking: "get"
     }); 
 
-    fetch('https://www.ralphcuizon.be/hoopertracker/hybrid.php?user_email=' + email, opties).then((res) => res.json())
+    fetch('https://www.ralphcuizon.be/hoopertracker/get_exercises.php?user_email=' + email, opties).then((res) => res.json())
     .then(response => {
 
       let tlines='';
@@ -103,6 +102,22 @@ function getExercises(email) {
     }
 
     $("#eList").html(tlines);
+    }).catch(error => console.log(error));
+
+  return true
+}
+
+function getUserInfo(email) {
+    fetch('https://www.ralphcuizon.be/hoopertracker/get_user.php?email=' + email).then((res) => res.json())
+    .then(response => {
+
+$('#my-profile [name="email"]').val(response[0].email);
+$('#my-profile [name="firstname"]').val(response[0].firstname);
+$('#my-profile [name="lastname"]').val(response[0].lastname);
+$('#my-profile [name="email"]').addClass('disabled');
+$('#my-profile [name="lastname"]').addClass('disabled');
+$('#my-profile [name="firstname"]').addClass('disabled');
+
     }).catch(error => console.log(error));
 
   return true

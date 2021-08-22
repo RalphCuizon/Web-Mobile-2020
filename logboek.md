@@ -22,8 +22,8 @@
 |22/08/2021    | 3 Uren          |Hybrid : Get exercises |
 |22/08/2021    | 3 Uren          |Hybrid : Statusbar geen zwarte bar + probleem oplossen emulator|
 |22/08/2021    | 2 Uren          |Hybrid : Frontend|
-|20/08/2021    | 3 Uren          |Hybrid : Login page + db|
-|20/08/2021    | 1 Uren          |Hybrid : User gelinkt met de exercises |
-|20/08/2021    | 2 Uren          |
+|22/08/2021    | 3 Uren          |Hybrid : Login page + db|
+|22/08/2021    | 1 Uren          |Hybrid : User gelinkt met de exercises |
+|20/08/2021    | 1 Uren          |Hybrid : get_user.php voor de pagina profile|
 |20/08/2021    | 2 Uren          |
 |20/08/2021    | 2 Uren          |
