@@ -22,6 +22,7 @@ var app = new Framework7({
   statusbar: {
     iosOverlaysWebView: true,
     androidOverlaysWebView: false,
+    androidBackgroundColor:'#FF9800'
   },
   on: {
     init: function () {
