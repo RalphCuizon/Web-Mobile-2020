@@ -17,6 +17,10 @@ var routes = [
     componentUrl: './pages/catalog.html',
   },
   {
+    path: '/exercises/',
+    componentUrl: './pages/exercises.html',
+  },
+  {
     path: '/product/:id/',
     componentUrl: './pages/product.html',
   },
