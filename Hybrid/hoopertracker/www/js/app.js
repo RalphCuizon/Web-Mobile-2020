@@ -31,6 +31,11 @@ var app = new Framework7({
         cordovaApp.init(f7);
       }
     },
+    pageInit: function (page) {
+      if (page.route.name === 'exercises') {
+        getExercises();
+      }
+    }
   },
 });
 // Login Screen Demo
@@ -44,3 +49,44 @@ $('#my-login-screen .login-button').on('click', function () {
   // Alert username and password
   app.dialog.alert('Username: ' + username + '<br/>Password: ' + password);
 });
+
+// Get Exercises
+function getExercises() {
+  var opties = {
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "omit", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    }
+  };
+
+    // body data type must match "Content-Type" header
+    opties.body = JSON.stringify({
+      format: "json",
+      table: "exercises",
+      bewerking: "get"
+    }); 
+    let email= 'ralph@test.com'
+
+    fetch('https://www.ralphcuizon.be/hoopertracker/hybrid.php?user_email=' + email, opties).then((res) => res.json())
+    .then(response => {
+      console.log(response);
+
+      let tlines='';
+      for (let i in response) {
+
+        tlines += `<div class="card">
+        <div class="card-header">Category: ${response[i].category}</div>
+        <div class="card-footer">Description: ${ response[i].description}</div>
+        <div class="card-footer">Time: ${ response[i].time} min(s)</div>
+        </div>`;
+    }
+
+    $("#eList").html(tlines);
+    }).catch(error => console.log(error));
+
+  return true
+}

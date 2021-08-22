@@ -19,6 +19,7 @@ var routes = [
   {
     path: '/exercises/',
     componentUrl: './pages/exercises.html',
+    name: 'exercises'
   },
   {
     path: '/product/:id/',
