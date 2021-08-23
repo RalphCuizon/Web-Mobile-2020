@@ -24,6 +24,6 @@
 |22/08/2021    | 2 Uren          |Hybrid : Frontend|
 |22/08/2021    | 3 Uren          |Hybrid : Login page + db|
 |22/08/2021    | 1 Uren          |Hybrid : User gelinkt met de exercises |
-|20/08/2021    | 1 Uren          |Hybrid : get_user.php voor de pagina profile|
-|20/08/2021    | 2 Uren          |
+|22/08/2021    | 1 Uren          |Hybrid : get_user.php voor de pagina profile|
+|22/08/2021    | 3 Uren          |geprobeerd om signout toe te voegen + text op exercise|
 |20/08/2021    | 2 Uren          |

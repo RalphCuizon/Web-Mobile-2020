@@ -2,7 +2,7 @@ var $ = Dom7;
 
 var device = Framework7.getDevice();
 var app = new Framework7({
-  name: 'HooperTracker', // App name
+  name: 'HooperTracker H', // App name
   theme: 'auto', // Automatic theme detection
   el: '#app', // App root element
 
@@ -37,6 +37,14 @@ var app = new Framework7({
     }
   },
 });
+// Log out btn
+$("#idSignOut").on('click', function () {
+
+  app.dialog.alert("clicked");
+
+
+});
+
 
 // Login Screen Demo
 $('#my-login-screen .login-button').on('click', function () {
@@ -102,6 +110,7 @@ function getExercises(email) {
     }
 
     $("#eList").html(tlines);
+    $("#text").html('All Exercises');
     }).catch(error => console.log(error));
 
   return true
@@ -114,11 +123,11 @@ function getUserInfo(email) {
 $('#my-profile [name="email"]').val(response[0].email);
 $('#my-profile [name="firstname"]').val(response[0].firstname);
 $('#my-profile [name="lastname"]').val(response[0].lastname);
-$('#my-profile [name="email"]').addClass('disabled');
-$('#my-profile [name="lastname"]').addClass('disabled');
-$('#my-profile [name="firstname"]').addClass('disabled');
+$('#idSignOut').removeClass('disabled');
+
 
     }).catch(error => console.log(error));
 
   return true
 }
+
