@@ -1,12 +1,16 @@
 package be.cuizon.hoopertracker
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
@@ -70,5 +74,45 @@ class HomeActivity : AppCompatActivity(), ExerciseAdapter.OnItemClickListener{
         val intent = Intent(this,EditorActivity::class.java)
         startActivity(intent)
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.nav_drawer, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_exercises -> {
+                val intent = Intent(this,HomeActivity::class.java)
+                startActivity(intent)
+                return true;
+            }
+            R.id.action_profile  -> {
+                val intent = Intent(this,ProfileActivity::class.java)
+                startActivity(intent)
+                return true;
+            }
+            R.id.action_logout  -> {
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Log Out")
+                builder.setMessage("Are you sure want to logout?")
+                builder.setPositiveButton("Yes",DialogInterface.OnClickListener { dialog: DialogInterface, which: Int ->
+                    this.finishAffinity()
+                    System.exit(0)
+
+                })
+                builder.setNegativeButton("No",DialogInterface.OnClickListener { dialog: DialogInterface, which: Int ->
+
+                })
+                builder.show()
+
+                return true;
+            }
+
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

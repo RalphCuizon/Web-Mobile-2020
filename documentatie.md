@@ -19,3 +19,4 @@
 |Installatie F7, Cordova + probleem oplossen bij did not found rimraf + JAVA SDK, environment,...|https://github.com/apache/cordova-android/issues/1040,https://github.com/onivim/oni/issues/918,https://www.youtube.com/watch?v=KKZRDn0Fnp4&t=342s|
 |Hybrid Cordova Framework| les 2,3 en 4|
 |Framework7 Docs|https://framework7.io/docs/|
+|Actionbar with activiteit, Log Out, when loop, AlertDialog|https://www.youtube.com/watch?v=TN0T_hqCmVo, https://stackoverflow.com/questions/58038440/toolbar-fragment-onoptionsitemselected-not-called-kotlin-several-solutions-what, https://kotlinlang.org/docs/control-flow.html#for-loops, https://www.youtube.com/watch?v=iesMhKUtYT8&t=729s, https://www.journaldev.com/309/android-alert-dialog-using-kotlin|

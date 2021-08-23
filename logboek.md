@@ -27,4 +27,4 @@
 |22/08/2021    | 1 Uren          |Hybrid : get_user.php voor de pagina profile|
 |23/08/2021    | 3 Uren          |Hybrid : geprobeerd om signout toe te voegen + text op exercise|
 |23/08/2021    | 2 Uren          |PID|
-|23/08/2021    | 2 Uren          |
+|23/08/2021    | 3 Uren          |Actionbar with activiteit, Log Out, when loop, AlertDialog|
