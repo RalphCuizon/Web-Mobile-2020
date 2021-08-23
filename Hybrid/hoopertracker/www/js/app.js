@@ -59,6 +59,8 @@ if(email!='' && password!=''){
         app.dialog.alert("Successfully logged in", "Login");
         getExercises(email);
         getUserInfo(email);
+          // Close login screen
+        app.loginScreen.close('#my-login-screen');
       }
       else {
         app.dialog.alert("Unsuccessfully logged in", "Login");
@@ -70,8 +72,7 @@ if(email!='' && password!=''){
   }
 
 
-  // Close login screen
-  app.loginScreen.close('#my-login-screen');
+
 
   
 });
