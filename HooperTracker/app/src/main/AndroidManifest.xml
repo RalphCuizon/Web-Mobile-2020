@@ -15,11 +15,6 @@
             android:name=".ProfileActivity"
             android:exported="true" />
         <activity
-            android:name=".NavDrawerActivity"
-            android:exported="true"
-            android:label="@string/title_activity_nav_drawer"
-            android:theme="@style/Theme.HooperTracker.NoActionBar"></activity>
-        <activity
             android:name=".EditorActivity"
             android:exported="true" />
         <activity
@@ -27,19 +22,17 @@
             android:exported="true" />
         <activity
             android:name=".HomeActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>

@@ -85,8 +85,6 @@ class HomeActivity : AppCompatActivity(), ExerciseAdapter.OnItemClickListener{
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_exercises -> {
-                val intent = Intent(this,HomeActivity::class.java)
-                startActivity(intent)
                 return true;
             }
             R.id.action_profile  -> {
