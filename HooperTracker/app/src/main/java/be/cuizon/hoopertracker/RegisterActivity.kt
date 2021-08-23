@@ -13,6 +13,7 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.wajahatkarim3.easyvalidation.core.collection_ktx.nonEmptyList
+import com.wajahatkarim3.easyvalidation.core.view_ktx.noNumbers
 import com.wajahatkarim3.easyvalidation.core.view_ktx.nonEmpty
 import com.wajahatkarim3.easyvalidation.core.view_ktx.validEmail
 import com.wajahatkarim3.easyvalidation.core.view_ktx.validator
@@ -45,7 +46,7 @@ class RegisterActivity : AppCompatActivity() {
         val etLastName = findViewById<EditText>(R.id.etRegisterLastName)
         if (etEmail.text.toString().isNotEmpty() && etPassword.text.toString().isNotEmpty() &&
             etConfirmPassword.text.toString().isNotEmpty() && etFirstName.text.toString().isNotEmpty() &&
-            etLastName.text.toString().isNotEmpty() && etEmail.validEmail())
+            etLastName.text.toString().isNotEmpty() && etEmail.validEmail() && etFirstName.noNumbers() && etLastName.noNumbers())
         {
             if (etPassword.text.toString() == etConfirmPassword.text.toString()) {
                 val url =
@@ -106,13 +107,21 @@ class RegisterActivity : AppCompatActivity() {
             etConfirmPassword.error = it
         }
 
-        etFirstName.nonEmpty() {
+        etLastName.validator()
+            .nonEmpty()
+            .noNumbers()
+            .addErrorCallback{
             etFirstName.error = it
         }
+            .check()
 
-        etLastName.nonEmpty() {
-            etLastName.error = it
-        }
+        etLastName.validator()
+            .nonEmpty()
+            .noNumbers()
+            .addErrorCallback{
+                etLastName.error = it
+            }
+            .check()
 
     }
 
