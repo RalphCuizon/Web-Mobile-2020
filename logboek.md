@@ -28,3 +28,4 @@
 |23/08/2021    | 3 Uren          |Hybrid : geprobeerd om signout toe te voegen + text op exercise|
 |23/08/2021    | 2 Uren          |PID|
 |23/08/2021    | 3 Uren          |Actionbar with activiteit, Log Out, when loop, AlertDialog|
+|23/08/2021    | 2 Uren          |Profile activiteit |

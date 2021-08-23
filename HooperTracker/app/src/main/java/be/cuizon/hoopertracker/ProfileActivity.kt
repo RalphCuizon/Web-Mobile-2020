@@ -17,29 +17,32 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import org.json.JSONArray
+import org.json.JSONObject
 
 class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        val url =
+       val url =
             "https://www.ralphcuizon.be/hoopertracker/get_user.php?email=" + UserInfo.email
         val queue = Volley.newRequestQueue(this)
-        val sr =object:  JsonArrayRequest(Request.Method.POST, url, { response ->
+        val sr =StringRequest(Request.Method.GET, url, { response ->
+
+            val jsonArray = JSONArray(response)
+            val jsonObject: JSONObject = jsonArray.getJSONObject(0)
+            val email= jsonObject.get("email").toString()
+            val firstname= jsonObject.get("firstname").toString()
+            val lastname= jsonObject.get("lastname").toString()
+            findViewById<TextView>(R.id.tvProfileEmail).text = email
+            findViewById<TextView>(R.id.tvProfileFirstName).text = firstname
+            findViewById<TextView>(R.id.tvProfileLastName).text = lastname
+
+
         }, { error ->
             Toast.makeText(this, error.message, Toast.LENGTH_LONG).show()
         })
-        {
-        override fun getParams(): HashMap<String, String> {
-            val map = HashMap<String, String>()
-            map["email"] = findViewById<TextView>(R.id.tvProfileEmail).text.toString()!!
-            map["firstname"] = findViewById<TextView>(R.id.tvProfileFirstName).text.toString()
-            map["lastname"] = findViewById<TextView>(R.id.tvProfileLastName).text.toString()
-
-            return map
-        }
-    }
         queue.add(sr)
 
     }
@@ -55,10 +58,10 @@ class ProfileActivity : AppCompatActivity() {
             R.id.action_exercises -> {
                 val intent = Intent(this,HomeActivity::class.java)
                 startActivity(intent)
-                return true;
+                return true
             }
             R.id.action_profile  -> {
-                return true;
+                return true
             }
             R.id.action_logout  -> {
                 val builder = AlertDialog.Builder(this)
@@ -76,7 +79,7 @@ class ProfileActivity : AppCompatActivity() {
                 })
                 builder.show()
 
-                return true;
+                return true
             }
 
 
